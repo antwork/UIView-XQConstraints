@@ -13,6 +13,7 @@
 		A9F9521F1C9BFEB500BA0D24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F9521D1C9BFEB500BA0D24 /* Main.storyboard */; };
 		A9F952211C9BFEB500BA0D24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F952201C9BFEB500BA0D24 /* Assets.xcassets */; };
 		A9F952241C9BFEB500BA0D24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F952221C9BFEB500BA0D24 /* LaunchScreen.storyboard */; };
+		A9F9522E1C9BFEF000BA0D24 /* UIView+XQConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F9522D1C9BFEF000BA0D24 /* UIView+XQConstraints.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		A9F952201C9BFEB500BA0D24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9F952231C9BFEB500BA0D24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9F952251C9BFEB500BA0D24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9F9522C1C9BFEF000BA0D24 /* UIView+XQConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XQConstraints.h"; sourceTree = "<group>"; };
+		A9F9522D1C9BFEF000BA0D24 /* UIView+XQConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XQConstraints.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		A9F952131C9BFEB500BA0D24 /* XQConstraintDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A9F9522B1C9BFEF000BA0D24 /* UIView+XQConstraints */,
 				A9F952171C9BFEB500BA0D24 /* AppDelegate.h */,
 				A9F952181C9BFEB500BA0D24 /* AppDelegate.m */,
 				A9F9521A1C9BFEB500BA0D24 /* ViewController.h */,
@@ -78,6 +82,15 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		A9F9522B1C9BFEF000BA0D24 /* UIView+XQConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				A9F9522C1C9BFEF000BA0D24 /* UIView+XQConstraints.h */,
+				A9F9522D1C9BFEF000BA0D24 /* UIView+XQConstraints.m */,
+			);
+			path = "UIView+XQConstraints";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -151,6 +164,7 @@
 			files = (
 				A9F9521C1C9BFEB500BA0D24 /* ViewController.m in Sources */,
 				A9F952191C9BFEB500BA0D24 /* AppDelegate.m in Sources */,
+				A9F9522E1C9BFEF000BA0D24 /* UIView+XQConstraints.m in Sources */,
 				A9F952161C9BFEB500BA0D24 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

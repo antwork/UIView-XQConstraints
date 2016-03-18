@@ -2,8 +2,8 @@
 //  main.m
 //  XQConstraintDemo
 //
-//  Created by Lunkr on 16/3/18.
-//  Copyright © 2016年 Lunkr. All rights reserved.
+//  Created by Bill on 16/3/18.
+//  Copyright © 2016年 Bill. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
