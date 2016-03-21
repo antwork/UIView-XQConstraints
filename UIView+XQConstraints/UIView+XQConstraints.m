@@ -8,7 +8,17 @@
 
 #import "UIView+XQConstraints.h"
 
+#import <objc/runtime.h>
+
 @implementation UIView (XQConstraints)
+
+- (XQConstraintChainBlock)xq_chainBlock {
+    return (XQConstraintChainBlock)objc_getAssociatedObject(self, @selector(xq_chainBlock));
+}
+
+- (void)xq_setChainBlock:(XQConstraintChainBlock)chainBlock {
+    objc_setAssociatedObject(self, @selector(xq_chainBlock), chainBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
 
 - (NSMutableArray *)xqConstraints {
     NSMutableArray *total = [NSMutableArray arrayWithArray:self.constraints];
@@ -27,6 +37,10 @@
 - (void)xqUpdateConstraint:(NSString *)identifier value:(CGFloat)constant {
     NSLayoutConstraint *constraint = [self xqFindConstraintByIdentifier:identifier];
     constraint.constant = constant;
+    
+    if (self.xq_chainBlock) {
+        self.xq_chainBlock(self, identifier, constant);
+    }
 }
 
 - (void)xqRemoveConstraint:(NSString *)identifier {

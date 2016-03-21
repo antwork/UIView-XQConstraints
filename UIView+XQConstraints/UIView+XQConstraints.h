@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^XQConstraintChainBlock)(UIView *view, NSString *identifier, CGFloat newValue);
+
 @interface UIView (XQConstraints)
+
+@property (readwrite, nonatomic, strong, setter = xq_setChainBlock:) XQConstraintChainBlock xq_chainBlock;
 
 - (NSMutableArray *)xqConstraints;
 
