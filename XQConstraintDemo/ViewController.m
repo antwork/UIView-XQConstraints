@@ -49,6 +49,7 @@
     // update certain constraint by identifier and value
     [view xqUpdateConstraint:@"width" value:50];
     
+    // setup chain block, change one constraint affect other 
     [view xq_setChainBlock:^(UIView *tmpView, NSString *identifier, CGFloat value){
         if ([identifier isEqualToString:@"width"]) {
             NSLayoutConstraint *constraint = [tmpView xqFindConstraintByIdentifier:@"height"];
